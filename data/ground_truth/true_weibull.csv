@@ -1,0 +1,7 @@
+equipment_class,true_beta,true_eta_days,current_pm_days,planned_cost_usd,failure_cost_usd
+Pump mechanical seal,1.6,900,,4000,22000
+Pump bearing,2.8,1600,1460.0,3000,30000
+Motor bearing,2.2,2200,,2500,18000
+Control valve positioner,0.8,2600,730.0,1500,6000
+Pressure transmitter,1.0,3500,,1200,5000
+Compressor valve,3.2,500,540.0,6000,45000

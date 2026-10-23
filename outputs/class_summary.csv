@@ -1,0 +1,7 @@
+equipment_class,assets,life_intervals,failures,suspensions,operating_years,crude_mtbf_days,crude_mtbf_90ci,weibull_beta,beta_90ci,weibull_eta_days,mttf_days,current_pm_days,strategy,reason,optimal_interval_days,recommended_interval_months,fitted_cost_per_year_current_usd,fitted_cost_per_year_recommended_usd
+Pump mechanical seal,12,50,38,12,94.6,910,694-1214,2.03,1.63-2.47,923,818,,Time-based replacement,"wear-out (beta 2.03), saves 31% vs run-to-failure",441.0,14.0,9828,6777
+Pump bearing,12,34,16,18,93.2,2127,1400-3391,3.76,2.57-5.23,1426,1288,1460.0,Time-based replacement,"wear-out (beta 3.76), saves 71% vs run-to-failure",607.0,19.0,6348,2478
+Motor bearing,10,24,14,10,80.6,2103,1345-3479,3.09,2.14-4.25,1944,1739,,Time-based replacement,"wear-out (beta 3.09), saves 58% vs run-to-failure",851.0,27.0,3781,1604
+Control valve positioner,10,48,12,36,75.1,2286,1411-3962,1.09,0.67-1.65,2062,1997,730.0,No time-based replacement (no proven wear-out),beta lower bound 0.67 <= 1.1,,,1595,1097
+Pressure transmitter,10,22,12,10,84.4,2569,1586-4452,0.88,0.57-1.28,2670,2842,,No time-based replacement (no proven wear-out),beta lower bound 0.57 <= 1.1,,,643,643
+Compressor valve,6,40,21,19,45.2,787,546-1174,3.37,2.40-4.56,556,499,540.0,Time-based replacement,"wear-out (beta 3.37), saves 61% vs run-to-failure",247.0,8.0,23698,12706

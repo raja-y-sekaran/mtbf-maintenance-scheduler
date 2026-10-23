@@ -1,0 +1,100 @@
+{
+  "per_class": [
+    {
+      "equipment_class": "Pump mechanical seal",
+      "true_beta": 1.6,
+      "beta_90ci": "1.63-2.47",
+      "true_beta_inside_ci": "False",
+      "true_optimal_interval_days": 506,
+      "recommended_interval_days": 426,
+      "decision_matches_truth": true,
+      "true_cost_per_year_run_to_failure": 9958,
+      "true_cost_per_year_current": 9958,
+      "true_cost_per_year_recommended": 8339,
+      "true_cost_per_year_optimal": 8278,
+      "share_of_possible_saving_captured": 0.964
+    },
+    {
+      "equipment_class": "Pump bearing",
+      "true_beta": 2.8,
+      "beta_90ci": "2.57-5.23",
+      "true_beta_inside_ci": "True",
+      "true_optimal_interval_days": 593,
+      "recommended_interval_days": 578,
+      "decision_matches_truth": true,
+      "true_cost_per_year_run_to_failure": 7691,
+      "true_cost_per_year_current": 5260,
+      "true_cost_per_year_recommended": 2897,
+      "true_cost_per_year_optimal": 2895,
+      "share_of_possible_saving_captured": 0.999
+    },
+    {
+      "equipment_class": "Motor bearing",
+      "true_beta": 2.2,
+      "beta_90ci": "2.14-4.25",
+      "true_beta_inside_ci": "True",
+      "true_optimal_interval_days": 892,
+      "recommended_interval_days": 822,
+      "decision_matches_truth": true,
+      "true_cost_per_year_run_to_failure": 3374,
+      "true_cost_per_year_current": 3374,
+      "true_cost_per_year_recommended": 1924,
+      "true_cost_per_year_optimal": 1917,
+      "share_of_possible_saving_captured": 0.995
+    },
+    {
+      "equipment_class": "Control valve positioner",
+      "true_beta": 0.8,
+      "beta_90ci": "0.67-1.65",
+      "true_beta_inside_ci": "True",
+      "true_optimal_interval_days": null,
+      "recommended_interval_days": null,
+      "decision_matches_truth": true,
+      "true_cost_per_year_run_to_failure": 744,
+      "true_cost_per_year_current": 1745,
+      "true_cost_per_year_recommended": 744,
+      "true_cost_per_year_optimal": 744,
+      "share_of_possible_saving_captured": 1.0
+    },
+    {
+      "equipment_class": "Pressure transmitter",
+      "true_beta": 1.0,
+      "beta_90ci": "0.57-1.28",
+      "true_beta_inside_ci": "True",
+      "true_optimal_interval_days": null,
+      "recommended_interval_days": null,
+      "decision_matches_truth": true,
+      "true_cost_per_year_run_to_failure": 522,
+      "true_cost_per_year_current": 522,
+      "true_cost_per_year_recommended": 522,
+      "true_cost_per_year_optimal": 522,
+      "share_of_possible_saving_captured": null
+    },
+    {
+      "equipment_class": "Compressor valve",
+      "true_beta": 3.2,
+      "beta_90ci": "2.40-4.56",
+      "true_beta_inside_ci": "True",
+      "true_optimal_interval_days": 218,
+      "recommended_interval_days": 244,
+      "decision_matches_truth": true,
+      "true_cost_per_year_run_to_failure": 36702,
+      "true_cost_per_year_current": 29622,
+      "true_cost_per_year_recommended": 14913,
+      "true_cost_per_year_optimal": 14724,
+      "share_of_possible_saving_captured": 0.987
+    }
+  ],
+  "fleet_cost_per_year_usd": {
+    "true_cost_per_year_run_to_failure": 478400,
+    "true_cost_per_year_current": 416758,
+    "true_cost_per_year_recommended": 256210,
+    "true_cost_per_year_optimal": 254250
+  },
+  "cleaning": {
+    "rows_in": 338,
+    "inspections_dropped": 114,
+    "duplicate_failures_dropped": 6,
+    "rows_out": 218
+  }
+}

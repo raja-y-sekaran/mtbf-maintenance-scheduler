@@ -1,0 +1,34 @@
+asset_id,equipment_class,last_renewal,interval_months,planned_date,note
+MB-108,Motor bearing,2018-05-22,27,2026-01-15,catch-up: was due 2020-08-20
+PMS-105,Pump mechanical seal,2024-05-11,14,2026-01-15,catch-up: was due 2025-07-11
+MB-105,Motor bearing,2023-04-14,27,2026-01-22,catch-up: was due 2025-07-13
+PMS-106,Pump mechanical seal,2021-09-04,14,2026-01-22,catch-up: was due 2022-11-04
+PB-111,Pump bearing,2024-06-24,19,2026-01-23,
+CV-104,Compressor valve,2025-05-29,8,2026-01-27,
+MB-103,Motor bearing,2023-06-08,27,2026-01-29,catch-up: was due 2025-09-06
+PMS-111,Pump mechanical seal,2022-08-15,14,2026-01-29,catch-up: was due 2023-10-15
+CV-101,Compressor valve,2025-03-29,8,2026-02-05,catch-up: was due 2025-11-27
+PB-108,Pump bearing,2022-05-03,19,2026-02-05,catch-up: was due 2023-12-02
+PB-105,Pump bearing,2022-06-05,19,2026-02-12,catch-up: was due 2024-01-04
+PMS-101,Pump mechanical seal,2024-10-05,14,2026-02-12,catch-up: was due 2025-12-05
+PB-101,Pump bearing,2024-05-23,19,2026-02-19,catch-up: was due 2025-12-22
+PB-104,Pump bearing,2022-10-27,19,2026-02-19,catch-up: was due 2024-05-27
+PB-107,Pump bearing,2022-12-20,19,2026-02-26,catch-up: was due 2024-07-20
+PMS-112,Pump mechanical seal,2024-10-23,14,2026-02-26,catch-up: was due 2025-12-23
+PB-103,Pump bearing,2023-03-25,19,2026-03-05,catch-up: was due 2024-10-23
+PMS-107,Pump mechanical seal,2023-10-13,14,2026-03-12,catch-up: was due 2024-12-12
+CV-103,Compressor valve,2024-07-06,8,2026-03-19,catch-up: was due 2025-03-06
+PB-102,Pump bearing,2023-11-01,19,2026-03-26,catch-up: was due 2025-06-01
+PMS-109,Pump mechanical seal,2024-04-13,14,2026-04-02,catch-up: was due 2025-06-13
+PMS-110,Pump mechanical seal,2025-02-04,14,2026-04-06,
+CV-102,Compressor valve,2025-09-15,8,2026-05-16,
+CV-106,Compressor valve,2025-10-07,8,2026-06-07,
+PMS-108,Pump mechanical seal,2025-04-16,14,2026-06-16,
+CV-105,Compressor valve,2025-10-19,8,2026-06-19,
+PB-110,Pump bearing,2024-12-08,19,2026-07-09,
+CV-104,Compressor valve,2025-05-29,8,2026-09-28,
+PMS-102,Pump mechanical seal,2025-08-01,14,2026-10-01,
+CV-101,Compressor valve,2025-03-29,8,2026-10-06,
+MB-102,Motor bearing,2024-07-25,27,2026-10-24,
+MB-107,Motor bearing,2024-08-02,27,2026-11-01,
+CV-103,Compressor valve,2024-07-06,8,2026-11-17,
