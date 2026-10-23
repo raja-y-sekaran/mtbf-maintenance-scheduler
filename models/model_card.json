@@ -1,0 +1,7 @@
+{
+  "model": "Two-parameter Weibull per equipment class, maximum likelihood with right-censored suspensions",
+  "beta_interval": "90% profile-likelihood interval",
+  "decision_rule": "time-based replacement only if the beta lower bound > 1.1 and the cost-optimal interval saves >= 10% vs run-to-failure; interval rounded down to whole months",
+  "training_data": "synthetic CMMS history (src/data/generate_synthetic.py), observed to 2025-12-31",
+  "intended_use": "demonstration on synthetic data; refit and re-check on a plant's own history before any use"
+}

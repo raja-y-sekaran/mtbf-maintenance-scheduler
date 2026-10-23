@@ -9,9 +9,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from .pipeline import DOCS, PLAN_END, PLAN_START
-from .policy import cost_rate
-from .reliability import johnson_ranks
+from src.maintenance.policy import cost_rate
+from src.models.reliability import johnson_ranks
+from src.pipeline import PLAN_END, PLAN_START
+from src.utils.paths import FIGURES as DOCS
 
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e4e3df"
 BLUE, ORANGE, AQUA, VIOLET = "#2a78d6", "#eb6834", "#1baf7a", "#6250d6"
@@ -29,7 +30,6 @@ def _style(ax):
 
 
 def draw(summary, iv, plan, truth):
-    DOCS.mkdir(exist_ok=True)
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK, "axes.labelcolor": INK})
     tr = truth.set_index("equipment_class")
     fitted = summary[summary.strategy != "Insufficient failure data"]

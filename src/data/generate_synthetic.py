@@ -1,7 +1,7 @@
 """Generate a synthetic CMMS failure / replacement history for 60 assets in six equipment classes.
 
 All values are invented. Each class has a TRUE Weibull time-to-failure (shape beta, scale eta, in days)
-saved to data/ground_truth/, so the analysis can be checked against the answer.
+saved to data/raw/ground_truth/, so the analysis can be checked against the answer.
 
   * Every asset's history starts at commissioning (2016-2019), so no interval is left-truncated.
   * Repair or replacement restores the item to as-good-as-new (renewal), the usual assumption for
@@ -11,18 +11,18 @@ saved to data/ground_truth/, so the analysis can be checked against the answer.
   * The extract is a little dirty, as real CMMS exports are: duplicate failure work orders and
     inspection-only entries that do not renew anything.
 
-Usage:  python data/generate_synthetic.py [--seed 42]
+Usage:  python -m src.data.generate_synthetic [--seed 42]
 """
 from __future__ import annotations
 
 import argparse
 from datetime import date, timedelta
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-OUT = Path(__file__).resolve().parent
+from src.utils.paths import DATA_RAW, DATA_SAMPLE, GROUND_TRUTH
+
 OBS_END = date(2025, 12, 31)
 
 # class, assets, beta, eta (days), current PM replacement interval (days or None),
@@ -75,10 +75,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, default=42)
     ev, truth = generate(ap.parse_args().seed)
-    (OUT / "ground_truth").mkdir(exist_ok=True)
-    ev.to_csv(OUT / "cmms_events.csv", index=False)
-    truth.drop(columns=["true_beta", "true_eta_days"]).to_csv(OUT / "equipment_classes.csv", index=False)
-    truth.to_csv(OUT / "ground_truth" / "true_weibull.csv", index=False)
+    ev.to_csv(DATA_RAW / "cmms_events.csv", index=False)
+    truth.drop(columns=["true_beta", "true_eta_days"]).to_csv(DATA_RAW / "equipment_classes.csv", index=False)
+    truth.to_csv(GROUND_TRUTH / "true_weibull.csv", index=False)
+    ev[ev.asset_id.isin(ev.asset_id.drop_duplicates().iloc[::6])].to_csv(DATA_SAMPLE / "cmms_events_sample.csv", index=False)
     print(f"{ev.asset_id.nunique()} assets, {len(ev)} events, "
           f"{(ev.event_type == 'failure').sum()} failure work orders, {(ev.event_type == 'pm_replacement').sum()} PM replacements")
 

@@ -1,18 +1,18 @@
-"""CMMS events -> life intervals -> MTBF and Weibull per class -> PM decision -> 2026 schedule -> validation."""
+"""Stages wired together: CMMS events -> life intervals -> MTBF and Weibull per class -> PM decision -> 2026 schedule -> validation."""
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-from .policy import cost_rate, optimal_interval, recommend
-from .prep import build_intervals, clean_events
-from .reliability import beta_profile_ci, mtbf_with_bounds, weibull_mean, weibull_mle
+from src.data.load_data import load_data, load_truth
+from src.data.preprocess import clean_events
+from src.features.life_intervals import build_intervals
+from src.maintenance.policy import cost_rate, optimal_interval, recommend
+from src.models.reliability import beta_profile_ci, mtbf_with_bounds, weibull_mean, weibull_mle
+from src.utils.paths import DATA_PROCESSED, REPORTS
 
-ROOT = Path(__file__).resolve().parents[2]
-DATA, OUT, DOCS = ROOT / "data", ROOT / "outputs", ROOT / "docs"
 OBS_END = "2025-12-31"
 PLAN_START, PLAN_END = pd.Timestamp("2026-01-01"), pd.Timestamp("2026-12-31")
 DAYS_PER_MONTH = 365.25 / 12
@@ -129,16 +129,14 @@ def validate(summary: pd.DataFrame, truth: pd.DataFrame) -> dict:
 
 
 def run():
-    OUT.mkdir(exist_ok=True)
-    ev_raw = pd.read_csv(DATA / "cmms_events.csv")
-    classes = pd.read_csv(DATA / "equipment_classes.csv")
-    truth = pd.read_csv(DATA / "ground_truth" / "true_weibull.csv")
+    ev_raw, classes = load_data()
+    truth = load_truth()
     summary, iv, ev, clean_log = analyse(ev_raw, classes)
     plan = schedule(summary, ev)
     val = validate(summary, truth)
     val["cleaning"] = clean_log
-    summary.drop(columns=[c for c in summary if c.startswith("x_")]).to_csv(OUT / "class_summary.csv", index=False)
-    iv.to_csv(OUT / "life_intervals.csv", index=False)
-    plan.to_csv(OUT / "pm_schedule_2026.csv", index=False)
-    (OUT / "validation.json").write_text(json.dumps(val, indent=2, default=str))
+    summary.drop(columns=[c for c in summary if c.startswith("x_")]).to_csv(REPORTS / "class_summary.csv", index=False)
+    iv.to_csv(DATA_PROCESSED / "life_intervals.csv", index=False)
+    plan.to_csv(REPORTS / "pm_schedule_2026.csv", index=False)
+    (REPORTS / "validation.json").write_text(json.dumps(val, indent=2, default=str))
     return summary, iv, plan, val, truth

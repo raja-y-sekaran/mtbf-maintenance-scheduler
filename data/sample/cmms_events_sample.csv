@@ -1,0 +1,50 @@
+work_order,asset_id,equipment_class,event_date,event_type
+WO100185,CV-101,Compressor valve,2018-07-11,commissioned
+WO100242,CV-101,Compressor valve,2019-11-15,failure
+WO100105,CV-101,Compressor valve,2021-05-22,pm_replacement
+WO100124,CV-101,Compressor valve,2022-03-15,failure
+WO100086,CV-101,Compressor valve,2023-09-28,pm_replacement
+WO100109,CV-101,Compressor valve,2025-03-29,pm_replacement
+WO100039,CVP-101,Control valve positioner,2017-07-04,inspection
+WO100227,CVP-101,Control valve positioner,2018-01-29,commissioned
+WO100315,CVP-101,Control valve positioner,2020-02-05,pm_replacement
+WO100330,CVP-101,Control valve positioner,2021-08-22,failure
+WO100181,CVP-101,Control valve positioner,2023-08-26,pm_replacement
+WO100194,CVP-101,Control valve positioner,2023-09-25,inspection
+WO100090,CVP-101,Control valve positioner,2025-09-20,pm_replacement
+WO100313,CVP-107,Control valve positioner,2019-03-15,commissioned
+WO100045,CVP-107,Control valve positioner,2021-02-19,pm_replacement
+WO100102,CVP-107,Control valve positioner,2023-03-08,pm_replacement
+WO100122,CVP-107,Control valve positioner,2025-03-04,pm_replacement
+WO100031,MB-103,Motor bearing,2017-06-29,commissioned
+WO100241,MB-103,Motor bearing,2023-06-08,failure
+WO100310,MB-109,Motor bearing,2018-10-11,commissioned
+WO100065,MB-109,Motor bearing,2025-02-06,failure
+WO100286,PB-105,Pump bearing,2017-01-16,inspection
+WO100270,PB-105,Pump bearing,2018-08-24,commissioned
+WO100003,PB-105,Pump bearing,2022-06-05,failure
+WO100235,PB-105,Pump bearing,2024-02-25,inspection
+WO100017,PB-111,Pump bearing,2016-06-15,commissioned
+WO100049,PB-111,Pump bearing,2017-01-13,inspection
+WO100142,PB-111,Pump bearing,2020-06-23,pm_replacement
+WO100119,PB-111,Pump bearing,2024-06-24,pm_replacement
+WO100320,PB-111,Pump bearing,2024-08-15,inspection
+WO100304,PMS-105,Pump mechanical seal,2017-06-25,inspection
+WO100028,PMS-105,Pump mechanical seal,2018-09-13,inspection
+WO100013,PMS-105,Pump mechanical seal,2019-03-20,commissioned
+WO100326,PMS-105,Pump mechanical seal,2020-07-04,inspection
+WO100274,PMS-105,Pump mechanical seal,2021-11-11,failure
+WO100183,PMS-105,Pump mechanical seal,2023-01-27,failure
+WO100075,PMS-105,Pump mechanical seal,2023-09-28,inspection
+WO100288,PMS-105,Pump mechanical seal,2024-05-11,failure
+WO100312,PMS-105,Pump mechanical seal,2024-05-13,failure
+WO100072,PMS-111,Pump mechanical seal,2016-10-20,inspection
+WO100218,PMS-111,Pump mechanical seal,2019-02-22,commissioned
+WO100035,PMS-111,Pump mechanical seal,2020-07-29,inspection
+WO100251,PMS-111,Pump mechanical seal,2021-06-22,failure
+WO100115,PMS-111,Pump mechanical seal,2022-08-15,failure
+WO100046,PT-105,Pressure transmitter,2018-01-28,commissioned
+WO100166,PT-105,Pressure transmitter,2024-03-17,failure
+WO100186,PT-105,Pressure transmitter,2024-03-18,inspection
+WO100273,PT-105,Pressure transmitter,2024-05-24,failure
+WO100177,PT-105,Pressure transmitter,2025-04-23,failure

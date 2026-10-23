@@ -1,0 +1,62 @@
+{
+  "Pump mechanical seal": {
+    "failures": 38,
+    "suspensions": 12,
+    "weibull_beta": 2.026594650163023,
+    "beta_90ci": "1.63-2.47",
+    "weibull_eta_days": 922.8241759246296,
+    "strategy": "Time-based replacement",
+    "reason": "wear-out (beta 2.03), saves 31% vs run-to-failure",
+    "recommended_interval_months": 14
+  },
+  "Pump bearing": {
+    "failures": 16,
+    "suspensions": 18,
+    "weibull_beta": 3.756354434583124,
+    "beta_90ci": "2.57-5.23",
+    "weibull_eta_days": 1425.6712266943093,
+    "strategy": "Time-based replacement",
+    "reason": "wear-out (beta 3.76), saves 71% vs run-to-failure",
+    "recommended_interval_months": 19
+  },
+  "Motor bearing": {
+    "failures": 14,
+    "suspensions": 10,
+    "weibull_beta": 3.0867549605741766,
+    "beta_90ci": "2.14-4.25",
+    "weibull_eta_days": 1944.4673665324713,
+    "strategy": "Time-based replacement",
+    "reason": "wear-out (beta 3.09), saves 58% vs run-to-failure",
+    "recommended_interval_months": 27
+  },
+  "Control valve positioner": {
+    "failures": 12,
+    "suspensions": 36,
+    "weibull_beta": 1.087608469120001,
+    "beta_90ci": "0.67-1.65",
+    "weibull_eta_days": 2061.6811067427984,
+    "strategy": "No time-based replacement (no proven wear-out)",
+    "reason": "beta lower bound 0.67 <= 1.1",
+    "recommended_interval_months": null
+  },
+  "Pressure transmitter": {
+    "failures": 12,
+    "suspensions": 10,
+    "weibull_beta": 0.8817204006604585,
+    "beta_90ci": "0.57-1.28",
+    "weibull_eta_days": 2670.4189192613553,
+    "strategy": "No time-based replacement (no proven wear-out)",
+    "reason": "beta lower bound 0.57 <= 1.1",
+    "recommended_interval_months": null
+  },
+  "Compressor valve": {
+    "failures": 21,
+    "suspensions": 19,
+    "weibull_beta": 3.366943398036562,
+    "beta_90ci": "2.40-4.56",
+    "weibull_eta_days": 555.5787582313336,
+    "strategy": "Time-based replacement",
+    "reason": "wear-out (beta 3.37), saves 61% vs run-to-failure",
+    "recommended_interval_months": 8
+  }
+}

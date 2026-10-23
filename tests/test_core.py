@@ -6,11 +6,12 @@ import pandas as pd
 import pytest
 from scipy import integrate, stats
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from mtbf.policy import cost_rate, integral_reliability, optimal_interval, recommend  # noqa: E402
-from mtbf.prep import build_intervals, clean_events  # noqa: E402
-from mtbf.reliability import (beta_profile_ci, johnson_ranks, mtbf_with_bounds, weibull_mean,  # noqa: E402
+from src.maintenance.policy import cost_rate, integral_reliability, optimal_interval, recommend  # noqa: E402
+from src.data.preprocess import clean_events  # noqa: E402
+from src.features.life_intervals import build_intervals  # noqa: E402
+from src.models.reliability import (beta_profile_ci, johnson_ranks, mtbf_with_bounds, weibull_mean,  # noqa: E402
                               weibull_mle)
 
 

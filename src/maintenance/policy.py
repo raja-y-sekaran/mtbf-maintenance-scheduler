@@ -4,7 +4,7 @@ from __future__ import annotations
 import numpy as np
 from scipy import optimize, special
 
-from .reliability import weibull_mean
+from src.models.reliability import weibull_mean
 
 
 def reliability(t, beta, eta):
