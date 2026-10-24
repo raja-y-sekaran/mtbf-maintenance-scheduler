@@ -2,7 +2,7 @@
 
 **Take the failure and replacement history from a CMMS, work out per equipment class whether failures come from wear-out or at random, and turn that into a replacement interval and a dated 2026 plan, but only where replacing early actually pays.**
 
-![CI](https://github.com/rajapune-create/mtbf-maintenance-scheduler/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/raja-y-sekaran/mtbf-maintenance-scheduler/actions/workflows/ci.yml/badge.svg)
 
 ![Cost against replacement interval](reports/figures/cost_curves.png)
 
